@@ -21,7 +21,7 @@ module.exports = {
                         const embed = new RichEmbed()
                         .setTitle('Support Server')
                         .setColor('RANDOM')
-                        .setDescription('Support for QuoteBot can be found [here](https://discord.gg/9Qu7aXe)')
+                        .setDescription('Support for Yokitsu can be found [here](https://discord.gg/9Qu7aXe)')
                         msg.channel.send({ embed });
                     } else if(c.first().content.toLowerCase().includes('b' || 'bot')) {
                         const embed = new RichEmbed()
