@@ -25,7 +25,7 @@ for(const file of commandFiles) {
 /// Events ///
 client.on('ready', () => {
     console.log(blue(`Ready and logged in as ${client.user.username}`));
-    client.user.setActivity(`Quoting ${client.users.size} users!`);
+    client.user.setActivity(`Playing on ${client.guilds.size} guilds with ${client.users.size} users | ?help`);
 });
 
 client.on('message', (msg) => {
