@@ -1,8 +1,8 @@
 /// Require modules ///
-const Discord         = require('discord.js');
-const fs              = require('fs');
-const { blue, red }   = require('chalk');
-const { token }       = require('./conf.json');
+const { Client, Collection }   = require('discord.js');
+const { readdirSync }          = require('fs');
+const { blue, red }            = require('chalk');
+const { token }                = require('./conf.json');
 
 /// Initiate the client ///
 const client = new Discord.Client({
@@ -15,7 +15,7 @@ client.settings = {
 }
 
 /// Command handler ///
-const commandFiles = fs.readdirSync('./commands');
+const commandFiles = readdirSync('./commands');
 
 for(const file of commandFiles) {
     const command = require(`./commands/${file}`);
