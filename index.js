@@ -5,11 +5,11 @@ const { blue, red }            = require('chalk');
 const { token }                = require('./conf.json');
 
 /// Initiate the client ///
-const client = new Discord.Client({
+const client = new Client({
     disableEveryone: true
 });
 
-client.commands = new Discord.Collection();
+client.commands = new Collection();
 client.settings = {
     defaultPrefix: '?'
 }
