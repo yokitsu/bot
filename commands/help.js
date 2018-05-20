@@ -18,7 +18,7 @@ module.exports = {
             return msg.channel.send({ embed });
         }
         
-        switch(args) {
+        switch(args[0]) {
             case 'general':
             case 'General':
                 const embed = new RichEmbed()
