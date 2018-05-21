@@ -8,7 +8,7 @@ module.exports = {
         let args = msg.content.split(/ +/).slice(2).join(/ +/);
 
         // If no arguments are provided, list all categories
-        if(!args) {
+        if(!args[0]) {
             const embed = new RichEmbed()
             .setTitle('List of Available Categories')
             .setColor('RANDOM')
