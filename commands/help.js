@@ -4,9 +4,7 @@ module.exports = {
     name: 'help',
     aliases: ['h'],
     description: 'Documentation of commands',
-    execute(client, msg) {
-        let args = msg.content.split(/ +/).slice(2).join(/ +/);
-
+    execute(client, msg, args) {
         // If no arguments are provided, list all categories
         if(!args[0]) {
             const embed = new RichEmbed()
