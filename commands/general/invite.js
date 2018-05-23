@@ -19,13 +19,13 @@ module.exports = {
                     errors: ['time'],
                 })
                 .then((c) => {
-                    if(c.first().content.toLowerCase().includes('s' || 'support')) {
+                    if(/s|support/gim.match(c.first())) {
                         const embed = new RichEmbed()
                         .setTitle('Support Server')
                         .setColor('RANDOM')
                         .setDescription('Support for Yokitsu can be found [here](https://discord.gg/9Qu7aXe)')
                         msg.channel.send({ embed });
-                    } else if(c.first().content.toLowerCase().includes('b' || 'bot')) {
+                    } else if(/b|bot/gim.match(c.first())) {
                         const embed = new RichEmbed()
                         .setTitle('Bot Invite')
                         .setColor('RANDOM')
