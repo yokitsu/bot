@@ -1,6 +1,6 @@
 module.exports = {
     name: 'help',
-    aliases: ['h'],
+    aliases: ['h', 'commands'],
     description: 'Gives extended help on an existing command/alias or documents all commands if none are explicitly stated.',
     category: 'General',
     syntax: 'help [command/alias]',
