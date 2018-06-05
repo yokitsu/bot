@@ -18,8 +18,7 @@ module.exports = {
                     {
                         "name": "Message",
                         "value": `${messageTime}ms`
-                    },
-                    ],
+                    }]
                 }});
     }
 }
