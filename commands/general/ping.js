@@ -20,6 +20,6 @@ module.exports = {
                         "value": `${messageTime}ms`
                     },
                     ],
-                }}`🏓 Pong!\n\nAPI: ${Math.round(client.ping)}ms\nMessage: ${messageTime}ms`);
+                }});
     }
 }
