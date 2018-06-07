@@ -7,6 +7,18 @@ module.exports = {
     async execute(client, msg) {
         const message = await msg.channel.send(`Getting ponged by ${msg.author.username}...`);
         const messageTime = message.createdTimestamp - msg.createdTimestamp;
-        return message.edit(`🏓 Pong!\n\nAPI: ${Math.round(client.ping)}ms\nMessage: ${messageTime}ms`);
+        return message.edit({
+            embed: {
+                title: `:ping_pong: Pong!`,
+                "fields": [
+                    {
+                        "name": "Gateway",
+                        "value": `${Math.round(client.ping)}ms`
+                    },
+                    {
+                        "name": "Message",
+                        "value": `${messageTime}ms`
+                    }]
+                }});
     }
 }
