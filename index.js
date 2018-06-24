@@ -35,6 +35,7 @@ client.on('ready', () => {
 
 client.on('message', (msg) => {
     if(!msg.content.startsWith(client.settings.defaultPrefix) || msg.author.bot) return;
+    
     const args = msg.content.slice(client.settings.defaultPrefix.length).split(/ +/);
     const commandName = args.shift().toLowerCase();
     const command = client.commands.find(c => c.name.includes(commandName) || c.aliases.includes(commandName));
