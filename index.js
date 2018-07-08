@@ -40,6 +40,7 @@ client.on('message', (msg) => {
     const commandName = args.shift().toLowerCase();
     const command = client.commands.find(c => c.name.includes(commandName) || c.aliases.includes(commandName));
     if(!command) return;
+    
     try {
         command.execute(client, msg, args);
         console.log(`\x1b[44m${msg.author.tag} ran command ${commandName ? command.name : command.name}\x1b[0m`);
