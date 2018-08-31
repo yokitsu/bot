@@ -1,0 +1,23 @@
+{
+  "name": "yokitsu",
+  "version": "0.0.0",
+  "description": "The ultimate bot for your anime and utilitarian needs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voided-x/Yokitsu.git"
+  },
+  "author": "void",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/voided-x/Yokitsu/issues"
+  },
+  "homepage": "https://github.com/voided-x/Yokitsu#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.0.0"
+  }
+}
