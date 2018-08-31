@@ -1,11 +1,10 @@
 # Yokitsu
-Yokitsu is the ultimate anime and moderation bot for Discord. 
 
-## Self-hosters!
-Personally, I have no problem with you self-hosting or referencing/using bits of code, as long as you comply with our license and give credit/acknowledge that I am the original author - you are fine.
+The ultimate bot for your anime and utilitarian needs
 
-We, the developers, will not help with self-hosting, unless it is a legitimate bug that is reproducible in the public instance.
-Only join the support server (which can be found [here](https://discord.gg/9Qu7aXe), by the way) if you need help with void (void#0001 / @ry0id on GitHub)'s bots.
+## Note to self-hosters
 
-# License
-[GNU GPL-v3.0](https://github.com/voided-x/QuoteBot/blob/master/LICENSE)
+This bot is, and always will be, free, both on the public instance and internally (source code), however, we'd like to state a few things before you dive in and start self-hosting your own copy:
+
+- Your instance must be private
+- We will not offer support for self-hosters, the server is for help with the public instance and other Voided X bots
