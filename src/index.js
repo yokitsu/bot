@@ -2,7 +2,7 @@
 require('dotenv').config();
 
 // Client imports and instantiation
-import Client from './structures/Client';
-const client = new Client({ 
+const YokitsuClient = require('./structures/Client');
+new Client({ 
     disableEveryone: true
 }).login(process.env.TOKEN); // Finally, login!
