@@ -1,7 +1,11 @@
 // Client to extend
 const { Client, Collection } = require('discord.js');
+
+// Command and event registries
 const CommandRegistry = require('./registry/CommandRegistry');
 const EventRegistry = require('./registry/EventRegistry');
+
+// Bot owners
 const { OWNERS } = process.env;
 
 // Class declaration
@@ -19,7 +23,7 @@ module.exports = class YokitsuClient extends Client {
     this.commandRegistry.build();
     this.eventRegistry.build();
     this.login(token)
-      .then(() => console.log(`[Process ${process.pid}] Yokitsu is connecting via WS -> Discord.`));
+      .then(() => console.log(`[Process ${process.pid}] Yokitsu is connecting via WS to Discord`));
   }
 
   getOP(id) {
