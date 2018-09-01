@@ -2,10 +2,7 @@
 require('dotenv').config();
 
 // Client imports and instantiation
-import Client from './structures/Client.js';
+import Client from './structures/Client';
 const client = new Client({ 
     disableEveryone: true
-});
-
-// Finally, login!
-client.login(process.env.TOKEN);
+}).login(process.env.TOKEN); // Finally, login!
