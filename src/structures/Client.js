@@ -2,8 +2,8 @@
 const { Client, Collection } = require('discord.js');
 
 // Command and event registries
-const CommandRegistry = require('./registry/CommandRegistry');
-const EventRegistry = require('./registry/EventRegistry');
+const CommandRegistry = require('./registry/CommandRegistry.js');
+const EventRegistry = require('./registry/EventRegistry.js');
 
 // Bot owners
 const { OWNERS } = process.env;
