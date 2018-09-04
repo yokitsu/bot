@@ -5,4 +5,4 @@ require('dotenv').config();
 const YokitsuClient = require('./structures/Client.js');
 new YokitsuClient({ 
     disableEveryone: true
-}).login(process.env.TOKEN); // Finally, login!
+}).build(process.env.TOKEN); // Finally, login!
