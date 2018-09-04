@@ -14,7 +14,7 @@ module.exports = class YokitsuClient extends Client {
     super(options);
 
     this.cmds = new Collection();
-    this.color = 0;
+    this.color = 7878056;
     this.commandRegistry = new CommandRegistry(this);
     this.eventRegistry = new EventRegistry(this);
   }
