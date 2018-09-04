@@ -33,10 +33,10 @@ module.exports = class YokitsuClient extends Client {
    * @param {String} token The token to connect to Discord
    * @returns {Promise}
    */
-  async build(token) {
+  async login(token) {
     this.commandRegistry.build();
     this.eventRegistry.build();
-    this.login(token)
+    super.login(token)
       .then(() => console.log(`[Process ${process.pid}] Yokitsu is connecting via WS to Discord`));
   }
 
