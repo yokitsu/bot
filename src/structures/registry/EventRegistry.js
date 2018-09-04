@@ -20,7 +20,7 @@ module.exports = class EventRegistry {
       try {
         await event.execute(this.bot, ...args);
       } catch(error) {
-        console.error(`[Event/${event.event}] Event has errored:\n${error.stack}`);
+        console.error(`[${event.event}] Event has errored:\n${error.stack}`);
       }
     };
 

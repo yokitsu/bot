@@ -21,18 +21,18 @@ module.exports = class CommandRegistry {
     for (let i = 0; i < categories.length; i++) {
       readdir(`./commands/${categories[i]}`, (err, files) => {
         if (err) console.error(err.stack);
-        console.info(`[Commands/${categories[i]}] Loading ${files.length} commands...`);
+        console.info(`[${categories[i]}] Loading ${files.length} commands...`);
         files.forEach(f => {
           try {
             const cmd = require(`../../commands/${categories[i]}/${f}`);
 
             if (cmd.disabled) return;
-            if (this.bot.cmds.has(cmd.command)) console.warn(`[Command/${cmd.command}] Command is in the collection already.`);
+            if (this.bot.cmds.has(cmd.command)) console.warn(`[${cmd.command}] Command is in the collection already.`);
 
             this.bot.cmds.set(cmd.command, cmd);
-            console.info(`[Command/${cmd.command}] Command ${cmd.command} has been registered!`);
+            console.info(`[${cmd.command}] Command ${cmd.command} has been registered!`);
           } catch(error) {
-            console.error(`[Error/${f.replace('.js', '')}] Command has errored:\n${error.stack}`)
+            console.error(`[${f.replace('.js', '')}] Command has errored:\n${error.stack}`)
           }
         });
       });
