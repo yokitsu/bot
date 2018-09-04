@@ -1,6 +1,4 @@
 const { readdir, readdirSync } = require('fs');
-const { PREFIX } = process.env;
-const { escapeRegExp } = require('../../util/Util');
 
 module.exports = class CommandRegistry {
   /**
@@ -36,37 +34,6 @@ module.exports = class CommandRegistry {
           }
         });
       });
-    }
-  }
-
-  /**
-   * Handles the command
-   * 
-   * @param {import('discord.js').Message} msg Discord.js' message class
-   * @returns {Promise}
-   */
-  async handleCommand(msg) {
-    if (msg.author.bot || !this.bot.ready) return;
-
-    const prefix = new RegExp(`^<@${this.bot.user.id}> |^${escapeRegExp(PREFIX)}`)
-      .exec(msg.content);
-
-    if (!prefix) return;
-
-    const args = msg.content.slice(prefix[0].length).trim().split(/ +/g);
-    const command = args.shift();
-    const cmd = this.bot.cmds.filter(c => c.command === command || c.aliases.includes(command));
-
-    if (cmd.length > 0) {
-      if (cmd[0].guildOnly && msg.channel.type === 'dm') return msg.channel.send(`:x: You must be in a guild to execute the \`${cmd[0].command}\` command.`);
-      if (cmd[0].ownerOnly && !this.bot.getOP(msg.author.id)) return msg.channel.send(`:x: You must be the bot developers to execute the \`${cmd[0].command}\` command.`);
-
-      try {
-        await cmd[0].execute(this.bot, msg, args);
-      } catch(error) {
-        msg.channel.send(`:x: Command \`${cmd[0].command}\` has errored, the incident has been logged.`);
-        console.error(`[Command/${cmd[0].command}] Command has been errored:\n${error.stack}`);
-      }
     }
   }
 };
