@@ -2,7 +2,7 @@
 # Default configuration used because that's all we need for now
 
 # Number of days of inactivity before a closed issue or pull request is locked
-daysUntilLock: 365
+daysUntilLock: 10
 
 # Issues and pull requests with these labels will not be locked. Set to `[]` to disable
 exemptLabels: []
