@@ -25,7 +25,7 @@ module.exports = class CommandRegistry {
             const cmd = require(`../../commands/${categories[i]}/${f}`);
 
             if (cmd.disabled) return;
-            if (this.bot.cmds.has(cmd.command)) console.warn(`[${cmd.command}] Command is in the collection already.`);
+            if (this.bot.cmds.has(cmd.command)) console.warn(`[${cmd.command}] Command is in the collection already`);
 
             this.bot.cmds.set(cmd.command, cmd);
             console.info(`[${cmd.command}] Command ${cmd.command} has been registered!`);
@@ -36,4 +36,4 @@ module.exports = class CommandRegistry {
       });
     }
   }
-};
+}
