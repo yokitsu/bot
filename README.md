@@ -19,6 +19,6 @@ Create a file called `config.json` in the the src (source) directory and create 
 {
     "token": "",
     "prefix": "?",
-    "owners": ["280158289667555328", "229552088525438977"]
+    "owners": []
 }
 ```
