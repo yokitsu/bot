@@ -60,5 +60,5 @@ typings/
 # next.js build output
 .next
 
-# Configs - since .env is pissing augu off
+# Configs
 src/config.json
