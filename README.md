@@ -13,12 +13,12 @@ Configuration example provided below
 
 ## Config
 
-Create a file called `.env` in the root of your directory and create the following entries to fill out before you run the bot
+Create a file called `config.json` in the the src (source) directory and create the following entries to fill out before you run the bot
 
-```
-TOKEN=
-PREFIX=
-
-# Separate Discord IDs with a `,` if your instance has multiple owners
-OWNERS=
+```json
+{
+    "token": "",
+    "prefix": "?",
+    "owners": ["280158289667555328", "229552088525438977"]
+}
 ```

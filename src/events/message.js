@@ -1,4 +1,4 @@
-const { escapeRegExp } = require('../util/Util');
+const { escapeRegExp } = require('../util/Util.js');
 
 module.exports = {
   event: 'message',
