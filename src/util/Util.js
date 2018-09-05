@@ -1,7 +1,7 @@
 const reRegExpExpChar = /[\\^$.*+?()[\]{}|]/g;
 const regHasRegExpChar = new RegExp(reRegExpExpChar.source);
 
-module.exports = class YokitsuUtil {
+module.exports = class Util {
   static escapeRegExp(str) {
     return (str && regHasRegExpChar.test(str)) ? str.replace(reRegExpExpChar, '\\$&') : str;
   }
@@ -24,4 +24,4 @@ module.exports = class YokitsuUtil {
 
     return timestr;
   }
-};
+}

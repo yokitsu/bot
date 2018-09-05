@@ -47,4 +47,4 @@ module.exports = class Collection extends Map {
 
     return random;
   }
-};
+}

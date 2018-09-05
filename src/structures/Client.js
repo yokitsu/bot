@@ -39,10 +39,10 @@ module.exports = class YokitsuClient extends Client {
   /**
    * If the user has permission to use restricted commands
    * 
-   * @param {String} id The user's id
+   * @param {String} id The user's ID
    * @returns {Boolean}
    */
   getOP(id) {
     return ['280158289667555328', '229552088525438977'].includes(id);
   }
-};
+}
