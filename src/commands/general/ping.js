@@ -9,10 +9,7 @@ module.exports = {
   execute: (bot, msg) => {
     msg.channel.send(':ping_pong:')
       .then(m => {
-        const timestamp = Math.round(m.createdTimestamp - msg.createdTimestamp);
-        const ws = Math.round(bot.ping);
-
-        m.edit(`:ping_pong: Pong!\n**WS**: \`${ws}ms\` | **Message**: \`${timestamp}ms\``);
+        m.edit(`:ping_pong: Pong!\n**WS**: \`${Math.round(bot.ping)}ms\` | **Message**: \`${Math.round(m.createdTimestamp - msg.createdTimestamp)}ms\``);
       });
   }
 }
