@@ -3,4 +3,4 @@ const YokitsuClient = require('./structures/Client.js');
 
 new YokitsuClient({ 
     disableEveryone: true
-}).build(); // Finally, login!
+}).build(); // Build registries and log into Discord
