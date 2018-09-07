@@ -1,11 +1,15 @@
 module.exports = {
-  command: 'ping',
-  description: 'Checks and returns Yokitsu\'s latency for debugging and informative purposes',
-  syntax: 'ping',
-  disabled: false,
-  ownerOnly: false,
-  guildOnly: false,
-  aliases: ['pong'],
+  help: {
+    command: 'ping',
+    description: 'Checks and returns Yokitsu\'s latency for debugging and informative purposes',
+    syntax: 'ping',
+    aliases: ['pong']
+  },
+  config: {
+    disabled: false,
+    ownerOnly: false,
+    guildOnly: false
+  },
   execute: (bot, msg) => {
     msg.channel.send(':ping_pong:')
       .then(m => {
