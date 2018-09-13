@@ -8,7 +8,7 @@ daysUntilLock: 10
 exemptLabels: []
 
 # Label to add before locking, such as `outdated`. Set to `false` to disable
-lockLabel: false
+lockLabel: dead
 
 # Comment to post before locking. Set to `false` to disable
 lockComment: >
