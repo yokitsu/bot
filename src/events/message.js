@@ -12,7 +12,7 @@ module.exports = {
 
     const args = msg.content.slice(prefix[0].length).trim().split(/ +/g),
           command = args.shift(),
-          cmd = bot.cmds.filter(c => c.command === command || c.aliases.includes(command));
+          cmd = bot.cmds.filter(c => c.help.command === command || c.help.aliases.includes(command));
 
     if (cmd.length > 0) {
       if (cmd[0].config.guildOnly && msg.channel.type === 'dm') return msg.channel.send(`:x: You must be in a guild to execute the \`${cmd[0].help.command}\` command`);
