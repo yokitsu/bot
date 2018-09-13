@@ -22,3 +22,6 @@ Create a file called `config.json` in the the src (source) directory and create 
     "owners": []
 }
 ```
+
+## License
+This project is licensed under MIT
