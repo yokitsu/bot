@@ -7,7 +7,7 @@ The ultimate bot for your anime and utilitarian needs
 This bot is, and always will be, free, both on the public instance and internally (source code), however, we'd like to state a few things before you dive in and start self-hosting your own instance
 
 - Your instance must be private
-- We will not offer support for self-hosters, the server is for help with the public instance and other Voided X bots
+- Help will not be given or offered. You are expected to know how to set it up when you start to self-host.
 
 Configuration example provided below
 
