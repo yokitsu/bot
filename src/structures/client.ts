@@ -5,7 +5,7 @@ import { MessageEmbed } from '@maika.xyz/eris-utils';
 
 export default class YokitsuClient extends Client {
     public manager: CommandManager;
-    public events: EventManager
+    public events: EventManager;
     
     constructor() {
         super(process.env.YOKITSU_TOKEN as string, {
