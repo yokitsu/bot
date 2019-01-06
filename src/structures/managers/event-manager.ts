@@ -1,12 +1,15 @@
 import Event from '../event';
 import Client from '../client';
 import { readdir } from 'fs';
+import EventProcessor from '../processors/event-processor';
 
 export default class EventManager {
     public client: Client;
+    public processor: EventProcessor;
 
     constructor(client: Client) {
         this.client = client;
+        this.processor = new EventProcessor(client);
     }
 
     public async start(): Promise<void> {
@@ -18,8 +21,7 @@ export default class EventManager {
             files.forEach(f => {
                 const event = require(`../../events/${f}`);
                 const ev: Event = new event.default(this.client);
-
-                // this.processor.process(ev);
+                this.processor.process(ev);
             });
         });
     }

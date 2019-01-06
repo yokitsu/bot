@@ -2,14 +2,17 @@ import { Collection } from '@maika.xyz/eris-utils';
 import { readdir, readdirSync } from 'fs';
 import YokitsuClient from '../client';
 import Command from '../command';
+import CommandProcessor from '../processors/command-processor';
 
 export default class CommandManager {
     public client: YokitsuClient;
     public commands: Collection<string, Command>;
+    public processor: CommandProcessor;
 
     constructor(client: YokitsuClient) {
         this.client = client;
         this.commands = new Collection<string, Command>();
+        this.processor = new CommandProcessor(client);
     }
 
     public async start(): Promise<void> {
