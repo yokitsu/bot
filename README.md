@@ -13,14 +13,17 @@ Configuration example provided below
 
 ## Config
 
-Create a file called `config.json` in the the src (source) directory and create the following entries to fill out before you run the bot
+Create a file called `.env` in the root directory and create the following entries to fill out before you run the bot:
 
-```json
-{
-    "token": "",
-    "prefix": "?",
-    "owners": []
-}
+```
+# Default Prefix for Yokitsu
+YOKITSU_PREFIX=?
+
+# Discord application token for connecting to Discord
+YOKITSU_TOKEN=
+
+# Owners of the bot, split using a comma (i.e: "{owner1},{owner2}")
+OWNERS=
 ```
 
 ## License

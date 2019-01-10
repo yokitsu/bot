@@ -1,22 +1,25 @@
 {
-  "name": "yokitsu",
-  "version": "0.0.0",
-  "description": "The ultimate bot for your anime and utilitarian needs",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/voided-x/Yokitsu.git"
-  },
-  "author": "void",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/voided-x/Yokitsu/issues"
-  },
-  "homepage": "https://github.com/voided-x/Yokitsu#readme",
-  "dependencies": {
-    "discord.js": "github:discordjs/discord.js"
-  }
+    "name": "yokitsu",
+    "description": "The ultimate bot for your anime and utilitarian needs",
+    "version": "0.0.1",
+    "main": "dist/bot.js",
+    "author": "void",
+    "private": true,
+    "dependencies": {
+        "@maika.xyz/eris-utils": "0.0.4",
+        "@maika.xyz/miu": "0.0.3",
+        "axios": "0.18.0",
+        "dotenv": "6.2.0",
+        "eris": "0.9.0"
+    },
+    "devDependencies": {
+        "@types/node": "10.12.18",
+        "typescript": "3.2.2"
+    },
+    "bugs": { "url": "https://github.com/yokitsu/Yokitsu/issues" },
+    "homepage": "https://yokitsu.xyz",
+    "scripts": {
+        "dist": "tsc",
+        "start": "cd dist && node bot.js"
+    }
 }
